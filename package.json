@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "인프 조별과제 Nodejs Package",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "axiom": "^0.1.6",
     "axios": "^1.4.0",
