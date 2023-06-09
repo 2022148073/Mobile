@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>병원 및 약국 찾기</title>
+    <link rel="stylesheet" href="/css/map.css" type="text/css" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e75242818f65cc859835e3884dc7a42a&libraries=services,clusterer,drawing"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>근처 병원/약국 찾기!</h1>
+    </header>
+    <div class="wmap">
+      <aside class="menu">
+        <form onsubmit="searchPlaces(); return false;">
+          <div>
+            <label for = "loc">지역 검색</label>
+            <input id = "loc" type = "text" placeholder="지역">
+          </div>
+          <div>
+              <label for = "hd">병원</label>
+              <input id = "hd" type = "radio" name = "hd" value = "병원" checked>
+              <label for = "hd">약국</label>
+              <input id = "hd" type = "radio" name = "hd" value = "약국">
+              <button type = "submit">검색</button>
+          </div>
+        </form>
+        <hr />
+
+        <ul id="placesList"></ul>
+        <div id="pagination"></div>
+      </aside>
+      <main>
+        <section>
+          <div id="map"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="text/javascript" src="/js/map.js"></script>
+  </body>
+</html>

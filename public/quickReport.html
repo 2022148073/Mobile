@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>응급신고</title>
+    <script type="text/javascript" src="/js/emap.js"></script>
+    <link rel="stylesheet" href="css/emergencyReport.css" type="text/css" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e75242818f65cc859835e3884dc7a42a&libraries=services,clusterer,drawing"
+    ></script>
+  </head>
+
+  <body>
+    <br /><br />
+    <div class="Emergency_main">
+      <button class="back" onclick="document.location = './index.html'">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <h1>🚨 Emergency 🚨</h1>
+      <div>
+        환자분의 소중한 생명을 지키기 위한 과정입니다. 최대한 자세하게
+        적어주세요! <br />
+        주의! 허위 신고 시 법적 처벌을 받으실 수 있습니다!
+      </div>
+      <form action = "/quickReport" method = "POST">
+        <h2>빠른 신고</h2>
+        <div class="symptom">
+          <label for="symptom">증상 : </label>
+          <select id="symptom" name = "sym">
+            <option selected>심정지</option>
+            <option>골절</option>
+            <option>자상</option>
+          </select>
+        </div>
+        <div>
+          <label for="place">위치</label>
+          <br />
+          <input name = "loc" id="place" type="text" placeholder="지역을 입력해주세요" />
+          <div class="map_report">
+            <button onclick="getloc();return false;">GPS 가져오기</button>
+            <button id="mapb" onclick="getmap();return false;">
+              지도 가져오기
+            </button>
+          </div>
+        </div>
+        <button id="report" type = "submit">신 고</button>
+      </form>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/bc4a4d4b9c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

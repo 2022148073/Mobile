@@ -1,0 +1,137 @@
+body {
+  position: relative;
+  background-color: #fa5f56;
+  /* background-image: url(image/emgbg.png); */
+  max-width: 400px;
+  margin: auto;
+  width: 100vmax;
+  /* width: 100%; */
+  left: calc(calc(100vw - 100vmax) / 2);
+  z-index: -1;
+  font-family: "KBO-Dia-Gothic_bold";
+}
+
+.footer {
+  text-align: center;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.Emergency_main {
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 0px 30px #ffffff;
+  text-align: center;
+  background: #ffffff;
+  margin-bottom: 50px;
+  opacity: 95%;
+}
+
+.Emergency_main > div {
+  margin-top: 10px;
+  text-align: left;
+}
+
+form > div {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.Emergency_main input {
+  box-sizing: border-box;
+  border: 1.7px solid;
+  width: 280px;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.Emergency_main input#age {
+  width: 55px;
+}
+
+#pic {
+  width: 80px;
+  border: none;
+}
+
+.Emergency_main > form > h2 {
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+}
+
+/* button */
+button {
+  border: 1.7px solid #000000;
+}
+
+/* back button */
+.Emergency_main > button.back {
+  border: 0px;
+  margin-right: 90%;
+  position: relative;
+  padding-top: 1.2%;
+  color: #000;
+  background: #ffffffee;
+  font-size: 20px;
+}
+
+.Emergency_main > button > img {
+  width: 100%;
+  left: 100%;
+  background-color: #ffffff;
+}
+
+textarea {
+  text-align: left;
+  height: 100px;
+  width: calc(100% - 20px);
+  border: solid 1.7px #000000;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#map {
+  width: 320px;
+  height: 320px;
+}
+
+/* map_report */
+
+.map_report {
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.map_report button {
+  width: 48%;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  font-family: "KBO-Dia-Gothic_bold";
+}
+
+button#report {
+  box-sizing: border-box;
+  margin: 20px 10px 0px 10px;
+  width: 280px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  font-family: "KBO-Dia-Gothic_bold";
+}
+
+@font-face {
+  font-family: "KBO-Dia-Gothic_bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}

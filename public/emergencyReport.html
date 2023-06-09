@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>후속신고</title>
+    <link rel="stylesheet" href="css/emergencyReport.css" type="text/css" />
+    <srcipt type="text/javascript" src="js/camera.js"></srcipt>
+  </head>
+
+  <body>
+    <br />
+    <br />
+    <div class="Emergency_main">
+      <button class="back" onclick="document.location = './index.html'">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <h1>🚨 Emergency 🚨</h1>
+      <div>
+        환자분의 소중한 생명을 지키기 위한 과정입니다. 최대한 자세하게
+        적어주세요! <br />
+        주의! 허위 신고 시 법적 처벌을 받으실 수 있습니다!
+      </div>
+      <form action = "/detailReport" method = "POST">
+        <h2>신고자 정보</h2>
+        <div>
+          <label for="name">신고자 이름</label>
+          <input id="name" name = "name" type="text" placeholder="이름 입력" />
+        </div>
+        <div>
+          <label for="phone">신고자 연락처</label>
+          <input
+            id="phone"
+            name = "phone"
+            type="tel"
+            pattern="[0-9]{11}"
+            placeholder="010 1234 5678 ( - 없이)"
+          />
+        </div>
+        <h2>상세 설명</h2>
+        <div>
+          <label for="description">상세 설명</label>
+          <p><textarea id="description" name = "desc" rows="6"></textarea></p>
+        </div>
+        <div>
+          <label for="age"> 환자의 나이 :</label>
+          <input id="age" name = "age" type="number" min="0" max="150" step="1" />
+        </div>
+        <div>
+          <label for="gender">환자의 성별 : </label>
+          <select id="gender" name = "gender">
+            <option selected>남성</option>
+            <option>여성</option>
+          </select>
+        </div>
+        <div>
+          <button id="report" type = "submit">
+            신고
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="Emergency_main">
+      <form action = "/take_pic" method = "POST" enctype="multipart/form-data">
+        <div>
+          <label for="takepic">사진 촬영 : </label>
+          <input id="pic" name = "pic" type="file" id="takepic" accept="image/*" />
+        </div>
+        <div>
+          <button type = "submit">사진 제출 및 미리보기</button>
+        </div>
+      </form>
+      <div id = "picpre">
+          <image style = "width : 100%;" src = "/messageimg/report.jpg" alt = "이미지가 없습니다!"></image>
+      </div>
+    </div>
+    <br />
+    <br />
+    <script
+      src="https://kit.fontawesome.com/bc4a4d4b9c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

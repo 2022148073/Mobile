@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/css/image/logo.png" type="image/png" />
+    <title>질병 정보</title>
+    <link rel="stylesheet" href="/css/wiki_main.css" type="text/css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="head">
+        <div class="logo">
+          <img src="/css/image/logo.png" alt="logo" type="image/png" />
+          <a href="./wiki_main.html">질병 정보</a>
+        </div>
+        <span id="category">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="#" id="category_1">뇌신경</a>
+          <!-- <ul class="submenu">
+            <li><a href="#">sbm1</a></li>
+            <li><a href="#">sbm2</a></li>
+            <li><a href="#">sbm3</a></li>
+          </ul> -->
+        </li>
+        <li>
+          <a href="#" style = "font-size : 13px;" id="category_2">정신건강</a>
+        </li>
+        <li>
+          <a href="#" id="category_3">눈</a>
+        </li>
+        <li>
+          <a href="#" id="category_4">귀코목</a>
+        </li>
+        <li>
+          <a href="#" id="category_5">구강</a>
+        </li>
+        <li>
+          <a href="#" id="category_6">뼈근육</a>
+        </li>
+        <li>
+          <a href="#" id="category_7">피부</a>
+        </li>
+        <li>
+          <a href="#" id="category_8">내분비</a>
+        </li>
+        <li>
+          <a href="#" id="category_9">호흡기</a>
+        </li>
+        <li>
+          <a href="#" id="category_10">순환기</a>
+        </li>
+        <li>
+          <a href="#" id="category_11">소화기</a>
+        </li>
+        <li>
+          <a href="#" id="category_12">면역</a>
+        </li>
+        <li>
+          <a href="#" id="category_13">비뇨기</a>
+        </li>
+        <li>
+          <a href="#" id="category_14">생식기</a>
+        </li>
+        <li>
+          <a href="#" style = "font-size : 13px;"  id="category_15">응급상황</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="search" tupe="text" placeholder="검색어를 입력해주세요." />
+        <button id="name_search_button">
+          <i class="fa-regular fa-paper-plane"></i>
+        </button>
+        <div class="ranking">
+          <strong>이달의 검색어 :</strong>
+          <a href="/">#철우</a>
+          <a href="/">#태현</a>
+          <a href="/">#승은</a>
+          <a href="/">#협</a>
+          <a href="/">#진명</a>
+          <a href="/">#아하메드</a>
+        </div>
+      </div>
+      <div class="list"></div>
+    </div>
+
+    <div class="footer">
+      <h1>about us</h1>
+      <p>출처 표기 등 하자</p>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/bc4a4d4b9c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="/js/wiki_main.js"></script>
+    <script>
+      function divBtn() {}
+    </script>
+
+    <script>
+      let isOpened = false;
+      menu_button.addEventListener("click", function (event) {
+        if (isOpened) {
+          menu.style.display = "none";
+          menu_button.style.right = "5%";
+          menu_icon.classList.replace("fa-xmark", "fa-bars");
+
+          isOpened = false;
+        } else {
+          menu.style.display;
+          menu.style.display = "block";
+          menu_icon.classList.replace("fa-bars", "fa-xmark");
+          menu_button.style.right = "27%";
+
+          isOpened = true;
+        }
+      });
+
+      window.addEventListener("resize", function handleScreenSizeChange() {
+        // Get the current screen width
+        var screenWidth = window.innerWidth;
+
+        // Check if the screen width is bigger than 800px
+        if (screenWidth >= 800) {
+          menu.style.display = "block";
+          menu_button.style.display = "none";
+          isOpened = false;
+
+          // Perform your desired actions here
+        } else {
+          menu_button.style.display = "block";
+          menu.style.display = "none";
+          if (isOpened) {
+            menu_button.style.right = "27%";
+          } else {
+            menu_button.style.right = "5%";
+          }
+          console.log("Screen size is not bigger than 800px");
+        }
+      });
+    </script>
+  </body>
+</html>
